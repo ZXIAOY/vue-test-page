@@ -1,6 +1,5 @@
 # vue-test
-
-> A Vue.js project
+自己学习vue时用来写各种代码的项目，同时学习webpack和各种配置的使用
 
 ## Build Setup
 
@@ -18,4 +17,4 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
