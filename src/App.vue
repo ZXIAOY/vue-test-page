@@ -1,23 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <zr-header></zr-header>
+    <div class="content">
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'app'
-}
+<script type='text/ecmascript-6'>
+  import header from "./components/zr-header.vue"
+  export default {
+    name: 'app',
+    components: {
+      'zr-header': header,
+    }
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style type="text/scss" lang="scss">
+  @import url("assets/cssReset.css");
+  .content {
+    height: 1000px;
+    margin: 80px;
+  }
 </style>

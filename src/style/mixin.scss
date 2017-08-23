@@ -1,0 +1,14 @@
+
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+@mixin horiCenter($width) {
+  margin: 0 auto;
+  width: $width;
+}
