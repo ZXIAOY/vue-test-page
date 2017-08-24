@@ -3,7 +3,7 @@
     <div class="header-container">
       <div class="header-nav">
         <router-link to="home"><span>浏览内容</span></router-link>
-        <router-link to="home" active-class="active-link"><span>App下载</span></router-link>
+        <router-link to="home" class="active-link"><span>App 下载</span></router-link>
       </div>
       <h1>
         <router-link to="home">知乎日报</router-link>
@@ -38,7 +38,7 @@
     cursor: pointer;
     h1 {
       width: 220px;
-      background: transparent url("http://daily.zhihu.com/img/new_home_v3/top_logo.png") no-repeat 0 13px;
+      background: transparent url("../assets/image/top_logo.png") no-repeat 0 13px;
       a {
         display: block;
         height: 78px;
@@ -53,6 +53,9 @@
         @include wh(140px, 78px);
         box-sizing: border-box;
         text-decoration: none;
+        & :last-child {
+          margin-right: -25px;
+        }
         span {
           display: block;
           margin: 23px auto 0;
