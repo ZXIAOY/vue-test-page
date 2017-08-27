@@ -1,21 +1,31 @@
 <template>
-  <div class="zr-header nav-fixed-top">
+  <header class="zr-header nav-fixed-top">
     <div class="header-container">
       <div class="header-nav">
-        <router-link to="home"><span>浏览内容</span></router-link>
-        <router-link to="home" class="active-link"><span>App 下载</span></router-link>
+        <span @click="viewContent" class="view-content">浏览内容</span>
+        <span @click="viewDownload" class="active-link view-app-download">App 下载</span>
       </div>
       <h1>
         <router-link to="home">知乎日报</router-link>
       </h1>
     </div>
-  </div>
+  </header>
 </template>
 
 <script type='text/ecmascript-6'>
+
   export default {
     data() {
       return {}
+    },
+    methods: {
+      viewContent: function () {
+        console.log("点击");
+        window.scrollTo(0,470);
+      },
+      viewDownload: function () {
+        window.scrollTo(0,78);
+      }
     }
   }
 </script>
@@ -48,28 +58,25 @@
     }
     .header-nav {
       float: right;
-      a {
+      margin-right: -24px;
+      span {
         float: right;
-        @include wh(140px, 78px);
+        display: block;
         box-sizing: border-box;
-        text-decoration: none;
+        margin: 23px auto 0;
+        padding: 8px 0;
+        width: 120px;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
         & :last-child {
           margin-right: -25px;
         }
-        span {
-          display: block;
-          margin: 23px auto 0;
-          padding: 8px 0;
-          width: 120px;
-          font-size: 16px;
-          line-height: 16px;
-          text-align: center;
-        }
       }
-      & a:visited {
+      & span:visited {
         color: #000;
       }
-      .active-link span{
+      .active-link{
         background-color: #f0f9ff;
         color: #008bed;
       }
